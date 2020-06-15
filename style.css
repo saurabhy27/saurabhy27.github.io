@@ -1,0 +1,16 @@
+body,head,html{
+  margin: 0 auto;
+  padding: 0;
+  background-color: white;
+  font-family: Arial;
+}
+body{
+  max-width: 1000px;
+  width: 100%;
+  /* min-width: 500px; */
+  font-size: 18px;
+}
+.content{
+  background-color: white;
+  text-align: center;
+}

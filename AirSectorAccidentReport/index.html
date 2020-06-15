@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Air sector Accident: 2011 to 2019</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Air Sector Accident in India: 2011 to 2019</h1>
+      <p>Tableau visulisation</p>
+      <hr style="margin-top: -1em;">
+    </div>
+    <div class="content">
+      <h2>Introduction</h2>
+      <p>An aviation accident, incident and serious incidents defined by the ICAO in the Convention on International Civil Aviation Annex 13 as an occurrence associated with the operation of an aircraft, which takes place from the time any person boards the aircraft with the intention of flight until all such persons have disembarked, and in which a) a person is fatally or seriously injured, b) the aircraft sustains significant damage or structural failure, or c) the aircraft goes missing or becomes completely inaccessible.<a href="http://www.iprr.org/manuals/Annex13.html">[1]</a><br><br>Aviation accident cases can be extremely complex, A hull loss occurs if an aircraft is destroyed, damaged beyond repair, lost, or becomes completely inaccessible.<a href="http://www.airsafe.com/events/define.htm">[2]</a> And Reparable-damage: Occurs if an aircraft is repairable. <br><br>In many aircraft accident inquiries, an intuitive distinction is made between “mechanical failure” and “human error.” While “failure” is a relatively neutral term, “error” suggests fault, which is a human context that implies blame. Mechanical failures can be described quite accurately (e.g., engine failure in hover, oil pump failure, tail rotor control failure, fuel starvation, etc.). This is not as difficult as it may first appear, and an understanding of the “mechanical” failures of the cognitive system during a rapidly unfolding emergency such as helicopter ditching should increase survival rates.<br><br>
+        To visualise the data and make meaningful interpretations, the following map was mapped in tableau.<br>
+        <ol>
+          <li>Year vs. Number of Accident</li>
+          <li>Manufactures and Flight variant</li>
+          <li>Operators</li>
+          <li>Day-Wise Breakdown</li>
+          <li>Month-wise Breakdown</li>
+          <li>Year-wise Breakdown</li>
+          <li>Geographical Analysis of deaths and injuries</li>
+          <li>Death vs. Injuries Sector wise</li>
+          <li>Relations between Death & Injuries vs. Contribution Factor</li>
+          <li>Relationship between Reasons and Sectors</li>
+          <li>Accident Category</li>
+          <li>Accident Phase</li>
+        </ol>
+        <br>For categorising the data, we ensured that there were no personal biases involved. Based on that the data was then divided into the following categories and subcategories:
+        <ol>
+          <li>Human/Pilot factors
+            <ul>
+              <li>Violations</li>
+              <li>Human errors</li>
+              <li>Lack of situational awareness</li>
+            </ul>
+          </li>
+          <li>Technical challenges
+            <ul>
+              <li>Equipment failure</li>
+              <li>Engine failure</li>
+            </ul>
+          </li>
+          <li>Environmental challenges
+            <ul>
+              <li>Bad weather</li>
+              <li>Animal intrusion</li>
+              <li>Lack of environmental cues</li>
+              <li>Terrain collision</li>
+            </ul>
+          </li>
+          <li>Organisational challenges
+            <ul>
+              <li>Loss of communication</li>
+              <li>Fault on part of the ground staff</li>
+            </ul>
+          </li>
+          <li>Others
+            <ul>
+              <li>War casualty</li>
+              <li>Hijack</li>
+              <li>Sabotage</li>
+              <li>Unknown</li>
+            </ul>
+          </li>
+        </ol>
+        <br><br>
+        An aviation accident may have a different type, but we have mainly focused on Civil, Military, Private.</p>
+
+      <h2>Year vs. Number of Accident</h2>
+      <p>This following map is used to know, Is the accident increasing over the years? <br>With this map, we can see that in the last four years, from 2016 to 2019, the number of accidents is low as compared to 2011 to 2016. 2015 has the highest number of accidents, and 2017 has the lowest number of accidents.<br><br>With the use of filters, we can see different results for different sectors,
+        <br>In the Civil sector, 2015 and 2016 have the highest number of accidents(3) after that accident reduced, which makes the civil sector safe.
+        <br>In the Military sector, 2015 have the highest number of accidents, which is 3.
+        <br>In the Private sector, 2011 and 2012 have the highest number of accidents(3) after that accident reduced, but form safety point of view we can’t say the private sector is safe because it includes private institute testing and training, where mistakes are not a rare.<p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/No_OfAccidentvsYear?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Manufactures and Flight variant</h2>
+      <p>In the below visualization map, we plotted the manufacturing companies and the number of accidents that occurred between 2011 and 2019. In the y-axis, we named manufacturing companies name and country of origin in parenthesis, and on the x-axis, we named No. of Accident. This map clearly shows that Boeing has the highest number of accidents, which is eight, while Airbus has only three accidents. We are discussing these two manufactures’ because these two company has the highest number of market share in the world. However, In India, Airbus has the biggest market share than Boeing, but Boeing has the highest number of accidents.<br><br>In-Flight The name map showed eight aircraft accident twice in 2011 to 2019 period. In which, In civil sector Boeing 737-8HG, Boeing 777-237LR, DHC-8-420Q, in military sector Antonov An-32, Dornier DO228 and private sector Beechcraft 90 King Air, Cessna 152 accident twice.<br><br>With the use of filters, we can see different results for different sectors,
+        <br>In the Civil sector, Boeing manufacturing company and Boeing 737 aircraft variant have the highest number of accidents. Resultant So many major countries grounded Boeing 737 aircraft, including the USA, India, China, France.
+        <br>In the Military sector, Aviant manufacturing company and Antonov An-32, Dornier DO228 aircraft has the highest number of accidents because these are ancient aircraft Antonov An-32 is 44 and Dornier DO228 is 38 years old.
+        <br>In the Private sector, Cessna 152 aircraft has the highest number of accidents. Its production had been stopped since 1985.</p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/Manufacture?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/FlightName?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Operators</h2>
+      <p>In the below visualization map shown the Operators and Number of accidents that occurred between 2011 and 2019. In the map, the y-axis indicates the number of accidents and in x-axis operators. This map shows that the Indian Air Force, Jet Airways, SpiceJet has the highest number of accidents 4.<br><br>With the use of filters, we can see different results for different sectors,
+        <br>In the Civil sector, Jet Airways and SpiceJet have the highest number of accidents. These airline stands second and third in market share in India.
+        <br>In the Military sector, Indian AF has the highest number of accidents.
+        <br>In the Private sector, Air Charter Service has the highest number of accidents.</p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/Operator?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Day-Wise Breakdown</h2>
+      <p>The following graphs use days as a significant separator. This map will help to visualization death, injuries and day wise number of accident in one map.<br>Top Map- Shows the number of the accident over the days, It clearly is shown that start and end of the months have the highest number of accidents.<br>
+         Bottom Map- This map has a bar and circle shape indicates which of the year have a higher proclivity towards deaths and injuries. In the following graphs, the x-axis represents days, and the start y-axis represents the number of death, and the end y-axis represents the number of injuries. The legend lists the sectors, which makes it possible to check for sector-wise variation in casualties across the days. <br>For example, day 19 has one accident results in a higher number of deaths and six injuries, while day 27 has three accident results in the highest number of injuries and no death.<br><br>With the use of filters, we can see different results for different sectors,
+        <br>In the Civil sector, there are no deaths, and day 27 has one accident results in the highest number of injuries.
+        <br>In the Military sector, there are no injuries, and day 3 has the highest number of deaths.
+        <br>In the Private sector, day 19 has the highest number of injuries and deaths with one accident.</p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/DeathInjuriesVsDaysSector?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Month-wise Breakdown</h2>
+      <p>The data can be broken down month-wise. This map will help to visualization death, injuries, and month-wise number of accidents in one map. <br>Top Map- Shows the number of the accident over the months. It clearly is shown that March, April, May, September, and December has the highest number of accidents. The effect of rainy season April, May, September and the effect of the winter season in December explains the highest number of accidents.<br> Bottom Map- This map has a bar and circle shape indicates which of the months have a higher proclivity towards deaths and injuries. In the following graphs, the x-axis represents months, and the start of the y-axis represents the number of death. The end y-axis represents the number of injuries, the legend lists the sectors, which can be seen separately upon selecting them from the legend. The reason for listing month-wise is to observe developing monthly trends that result in deaths and injuries.<br><br>With the use of filters; we can see different results for different sectors,
+        <br>In the Civil sector, there are no deaths, and December has two accidents results in the highest number of injuries.
+        <br>In the Military sector, there are no injuries, and June has two accidents results in the highest number of deaths.
+        <br>In the Private sector, April has the highest number of injuries and deaths with three accidents.</p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/DeathInjuriesVsMonthsSector?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Year-wise Breakdown</h2>
+      <p>The following graphs use years as a significant separator. This map will help to visualization death, injuries and year-wise number of accident in one map.<br>Top Map- Shows the number of the accident over the years It clearly shown that 2014 2015 has the highest number of accidents.<br>Bottom Map- This map has a bar and circle shape indicates which of the year have a higher proclivity towards deaths and injuries. In the following graphs, the x-axis represents years, and the start y-axis represents the number of death, and the end y-axis represents the number of injuries. The legend lists the sectors, which makes it possible to check for sector-wise variation in casualties across the years. <br>For example, 2011 has five accident results in a higher number of deaths and 13 injuries.<br><br>With the use of filters, we can see different results for different sectors,
+        <br>In the Civil sector, 2016 has the highest number of injuries, and three accidents happen.
+        <br>In the Military sector, 2015 and 2019 have three, and one accident results in the highest number of deaths.
+        <br>In the Private sector, 2011 has the highest number of injuries and deaths because of three accidents.</p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/DeathInjuriesVsYearSector?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Geographical Analysis of deaths and injuries</h2>
+      <p>Our first geographical visualization below is a map of the air sector accidents that occurred between 2011 and 2019. We have imported the latitude and longitude of the location at which the accident occurred. Deaths and injuries have been marked, with the size of the circles represent the number of deaths involved, and the color represents the injuries. <br><br>In the geographical maps below, the legends refer to the number of deaths and injuries. Also, it is easy to observe that passenger aircraft based accidents mostly occur in locations near metro cities such as Mumbai, Delhi.<br><br>With the use of filters; we can see different results for different sectors,
+        <br>In the Civil sector, No deaths, and the highest number of injuries (16) were at 15.3803ﹾN 73.8350ﹾE (Goa-Dabolim Airport).
+        <br>In the Military sector, No injuries, and the highest number of deaths (10) were at 28.3345ﹾN 77.0427ﹾE (Delhi-Indira Gandhi International Airport).
+        <br>In the Private sector, the highest number of injuries (6) and deaths (17) were at 27.3423ﹾN 91.5157ﹾE (Tawang, Arunachal Pradesh).</p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/GeoGraphicLocations?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+      <p>In Below origin & destination geographical visualization, we have marked Origin airport and the destination airport with the line. And the size of the circles represents the number of deaths, and the color number of injuries mean darker color more injuries.<br><br>Some Findings <br>Four flight whose origin or destination was out of India involved in an accident. <br>Hilly Area has more death and injuries. Example- Northeast. <br>Delhi and Mumbai were the origin or destination airports of the most accident.</p>
+      <iframe src="https://public.tableau.com/views/OriginDestination_15911327748800/Sheet1?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Death vs. Injuries Sector wise</h2>
+      <p>This map can be useful to know which of the three-sector is saf. This map shows that in the civil sector, there is zero death 23 injuries and In the military sector, accidents result in all death(32), while the private sector accident results in a more significant number of deaths(34) compare to injuries(6)</p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/InjuriesVsDeathSector?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Relations between Death & Injuries vs. Contribution Factor</h2>
+      <p>The below visualization map shows Deaths & Injuries vs. Category & Sub-Category compares the number of people dying and injured. The reason we are comparing deaths and injuries is to get an insight into the type of Contribution factor that is a high priority and are in immediate need of an intervention. We have shown the number of deaths on the x-axis, and injuries on the y-axis. An ideal scenario would be that all the data points located towards the bottom left of the graph mean no death and no injuries. However, the graph shows that the deaths caused by Human errors are disproportionately high. This indicates that this is an issue that is both dangerous and high priority for intervention. On the other hand, Engine failure related results in a higher percentage of injuries as compared to deaths, meaning there are more survivors from such accidents. Moreover, there is a negligible number of deaths and injuries results from Animal Intrusion and Human Violations.<br><br>With the use of filters; we can see different results for different sectors,
+        <br>In the Civil sector, Engine Failures result in the highest number of injuries (16).
+        <br>In the Military sector, Human Errors result in the highest number of deaths (10).
+        <br>In the Private sector, Human Error results in the highest number of injuries (6) and deaths (17).</p>
+        <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/InjuriesVsDeathContibutionFactor?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Relationship between Reasons and Sectors</h2>
+      <p>The below map shows the relationship between the sectors and the Contribution factor attributed to the accidents this map also shows that accidents related to Human error and Engine Failure result in the maximum number of casualties.<br><br>With the use of filters, we can see different results for different sectors,
+        <br>The Civil sector map shows that Human error and Engine failures result in the maximum number of casualties. International Aviation Organization should intervene here.
+        <br>The military sector map shows that Human error and Equipment Failure (Because some of the aircraft which Indian Air Force uses are too old even aircraft manufacturing companies stop their production) results in the maximum number of casualties.
+        <br>The Private sector map shows that Human error results in the maximum number of casualties. Because the private sector includes Testing and Training in Institutes.</p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/Sheet14?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Accident Category</h2>
+      <p>In the Accident category, we have divided all accidents into two groups. <br>a). Hull-loss <br>b). reparable-damage
+        <br><br>a). Hull-loss: This occurs if an aircraft is destroyed, damaged beyond repair.
+        <br>b). reparable-damage: Occurs if an aircraft is repairable.<br><br>
+        In below map shows that in the civil sector, aircraft have a higher chance of reparable-damage accidents. In contrast, in military sector aircraft, there is no change of reparable-damage accidents all accident has Hull-loss category. In the private sector, aircraft have a lower chance of a reparable-damage accident.</p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/AccidentCategory?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Accident Phase</h2>
+      <p>This following map is used to know, in which phase aircraft pilots should be more focused on flying. We have used Take-Off, Initial-climb, En-route, Cruise, approach, Landing, Standing phases. <br><br>
+        <b>Take-Off-</b> When the aircraft accelerates to a flying speed that is particular to every flight, it becomes airborne, and the landing gear is retracted.<br>
+        <b>Initial-Climb-</b> The thrust is reduced to climb power. This phase includes gaining altitude and increasing the speed step by step. <br>
+        <b>En-route-</b> The en-route phase of flight is defined as that segment of flight from the termination point of a departure procedure to the origination point of an arrival procedure.<br>
+        <b>Cruise-</b> This is where the bulk of the flight is spent. Optimum cruise altitude depends upon the weight of the aircraft, and typically, an aircraft will ascend (climb) as the flight progresses, and fuel weight is burnt off. <br>
+        <b>Approach-</b> At this time, the aircraft has to be configured for landing, and this is predominately predetermined at the flight planning stage. <br>
+        <b>Landing-</b> This is the critical stage of flight where the aircraft slows to such an extent that it falls out of the sky just inches from the ground.<br>
+        <b>Standing-</b> Aircraft are standing on the ground.<br><br>With the use of filters, we can see different results for different sectors,
+        <br>In the Civil sector, the Take-Off phase results in the highest number of injuries.
+        <br>In the Private sector, the Landing phase results in the highest number of deaths and injuries.</p>
+      <iframe src="https://public.tableau.com/views/UpdatedAirSectorAccidentGraphicalRepresentation/AccidentPhase?:showVizHome=no&:embed=true#5" class="iframetableau"></iframe>
+
+      <h2>Conclusion</h2>
+      <p>It is important to keep in mind that the dataset is gleaned from <a href="https://aviation-safety.net/" style="color:black;">Aviation safety website</a> and DGCA accident reports. Some accidents whose accident report is not completed maybe not included in this dataset. This report aims to know the safety of air aviation in a different sector. And we found that the civil aviation sector is safe and record 15 accidents in last nine years with no death which are decreasing over the years and most of the accident is due to Human error and Engine Faliae at Take-off phase. And in Military Aviation is not a safe sector and record seven accidents, this is less than civil aviation, but we have to know that many military accidents not recorded. Reson of these Military accidents is that the Indian Air Force is still using ancient aircraft even some aircraft's production stopped. In Private Aviation which include VVIP Chopper, Training and Testing and personal uses has record 13 accidents Most of the accident is due to human error at Landing Phase.</p>
+
+      <h2>References</h2>
+      <ol>
+        <li><a href="http://www.iprr.org/manuals/Annex13.html">http://www.iprr.org/manuals/Annex13.html</a></li>
+        <li><a href="http://www.airsafe.com/events/define.htm">http://www.airsafe.com/events/define.htm</a></li>
+      </ol>
+
+    </div>
+    <hr>
+    <div class="footer">
+      <div class="left_footer">
+        <h4>Under the guidance of:</h4>
+        <br>
+        <p>Prof. Vivek Kant <br>Assistant Professor, IDC<br>IIT Bombay</p>
+      </div>
+      <div class="right_footer">
+        <h4>Submitted by:</h4>
+        <br>
+        <p>Saurabh Singh <br>B.Tech <br>IIT Bombay</p>
+      </div>
+    </div>
+  </body>
+</html>
