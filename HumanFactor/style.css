@@ -1,0 +1,162 @@
+body,head,html{
+  margin: 0 auto;
+  padding: 0;
+  background-color: white;
+  font-family: Arial;
+}
+body{
+  max-width: 1000px;
+  width: 100%;
+  /* min-width: 500px; */
+  font-size: 18px;
+}
+.header{
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0 auto;
+  text-align: left;
+  background-color: white;
+}
+.header h1{
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 0;
+  background-color: white;
+}
+.header p{
+  margin-top: 10px;
+  /* font-family: serif; */
+  background-color: white;
+}
+/* .header hr{
+  background-color: green;
+  padding: 0;
+  margin: 0;
+} */
+.content{
+  font-size: 18px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0 auto;
+  text-align: left;
+  background-color: white;
+  font-family: Calibri;
+}
+.content h2{
+  margin-bottom: 0;
+}
+.content p{
+  /* font-family: sans-serif; */
+  font-family: "Calibri" ;
+  src: url(Calibri .ttf);
+}
+.iframetableau{
+  width: 80%;
+  margin-left: 10%;
+  height: 500px;
+  border: none;
+}
+.footer{
+  font-size: 18px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.left_footer{
+  float: left;
+  width: 50%;
+  /* background-color: white; */
+}
+.left_footer h4{
+  margin-bottom: 0;
+}
+.left_footer p{
+  margin-top: 0;
+}
+.right_footer{
+  float: right;
+  width: 50%;
+  /* background-color: white; */
+  text-align: right;
+}
+.right_footer h4{
+  margin-bottom: 0;
+}
+.right_footer p{
+  margin-top: 0;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .header{
+    text-align: left;
+  }
+  .header h1{
+    font-size: 25px;
+  }
+  .header p{
+    font-size: 15px;
+  }
+  .header hr{
+    display: block;
+  }
+  /* .header hr{
+    background-color: green;
+    padding: 0;
+    margin: 0;
+  } */
+  .content{
+    font-size: 15px;
+  }
+  .content h2{
+    font-size: 18px;
+  }
+  .iframetableau{
+    width: 100%;
+    margin-left: 0;
+    height: 500px;
+  }
+  .footer{
+    font-size: 14px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .header{
+    text-align: left;
+  }
+  .header h1{
+    font-size: 20px;
+  }
+  .header p{
+    font-size: 14px;
+  }
+  . header hr{
+    display: none;
+  }
+  /* .header hr{
+    background-color: green;
+    padding: 0;
+    margin: 0;
+  } */
+  .content{
+    font-size: 14px;
+  }
+  .content h2{
+    font-size: 16px;
+  }
+  .iframetableau{
+    width: 100%;
+    margin-left: 0;
+    height: 500px;
+  }
+  .footer{
+    font-size: 14px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
