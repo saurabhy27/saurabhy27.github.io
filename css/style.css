@@ -1,0 +1,202 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+@font-face{
+    font-family: Ubuntu;
+    src: url('http://example.com/fonts/ubuntu.woff') format('woff');
+}
+
+
+body{
+    font-family: Ubuntu, Helvetica, Arial;
+    background: url("../image/background.jpg") no-repeat;
+}
+
+nav{
+    margin-left: 9%;
+    width: 10%;
+    display: block;
+    float: left;
+    margin-right: 1%;
+}
+nav a{
+    width: 100%;
+    display: block;
+    background-color: rgb(0, 195, 255);
+    line-height: 220%;
+    margin: 25px auto;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    font-variant: small-caps;
+    font-size: 16px;
+    color: #ffffff;
+    padding-left: 5%;
+}
+#active{
+    padding-left: 10%;
+    background-color: rgb(150, 195, 255);
+}
+.left{
+    background-color: #ffffff;
+    width: 35%;
+    display: block;
+    float: left;
+    margin: 25px 1% 25px auto;
+    text-align: center;
+    padding:30px;
+    box-sizing: border-box;
+    height: 90vh;
+}
+.left img{
+    border: 2px double rgb(0, 195, 255);
+    margin-top: 50px;
+    width: 250px;
+    border-radius: 5%;
+}
+.left h1{
+    margin-top: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(0, 195, 255);
+}
+.left h1 p{
+    color: rgb(0, 0, 0);
+    display: inline-block;
+}
+#interest{
+    line-height: 120%;
+    margin-top: 10px;
+}
+hr{
+    margin-top: 25px;
+    width: 80%;
+}
+#experience{
+    margin-top: 25px;
+}
+#contact{
+    background-color:rgb(0, 195, 255);
+    line-height: 220%;
+    margin-top: 25px;
+    color: #ffffff;
+}
+
+
+
+.right{
+    background-color: #ffffff;
+    width: 35%;
+    display: inline-block;
+    margin: 25px auto;
+    text-align: left;
+    padding:30px;
+    box-sizing: border-box;
+    height: 90vh;
+    overflow: auto;
+    /* transform: rotate(180deg); */
+    /* transition: background-color 2s linear 1s; */
+}
+.right:hover{
+    background-color: #ffffff;
+}
+
+h2{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    /* position: fixed; */
+}
+
+.right hr{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.right button{
+    text-align: left;
+    line-height: 220%;
+    background: url("../image/donwload.png") no-repeat;
+    background-size: 20px ,30px;
+    padding-left: 5%;
+    border: 1px solid #000000;
+    background-position: left;
+    background-color: rgb(150, 195, 255);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+h3{
+    /* background: url('../image/courseralogo.png') no-repeat; */
+    /* padding-left: 5%; */
+    /* background-size: 20px ,30px; */
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(0, 195, 255);
+}
+
+article{
+    padding:10px;
+    margin-top: 10px;
+    border: 1px double rgb(0, 195, 255);
+}
+
+article h4{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+article p{
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 120%;
+    /* padding: 2px auto; */
+}
+li{
+    margin: 4px auto;
+    font-size: 15px;
+    list-style-type: none;
+}
+.courseInst{
+    margin-top: 5px;
+    font-style: 10px;
+    font-style: italic;
+}
