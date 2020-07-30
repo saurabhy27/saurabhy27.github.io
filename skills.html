@@ -5,20 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Saurabh Singh Personal Website</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/f83785f91b.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css">
         <script src="js/javascript.js"></script>
     </head>
     <body>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="skills.html" id="active">Skills</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <section class="col-container">
+        <div class="text-center">
+            <div id="loader" class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-transparent">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarCollapseId" aria-controls="NavbarCollapseId" aria-label="Navbar Toggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse" id="NavbarCollapseId">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="resume.html" class="nav-link">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="skills.html" class="nav-link active" id="active">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="col-container">
             <section class="col left">
             <img class="img-thumbnail" src="image/self.jpg" alt="My image">
-            <h1><p>Hi, i'm </p> Saurabh Singh</h1>
+            <h1><span>Hi, i'm </span> Saurabh Singh</h1>
             <p id="interest">Interested In: Data Scientist, Machine Learing, Android App Developer, Web Developer</p>
             <hr>
             <p id="experience">Graduated from IIT Bombay Batch 2020</p>
@@ -49,7 +74,7 @@
             </article>
             
             </section>
-        </section>
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
