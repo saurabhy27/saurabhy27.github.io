@@ -1,0 +1,10 @@
+{
+  "Programming": ["Python", "Go", "Java"],
+  "System_Architecture": ["System Design", "Scalability", "Distributed Systems", "API Design", "Database Architecture"],
+  "Frameworks": ["Flask", "FastAPI", "Spring Boot", "Hugging Face", "Transformers", "Selenium"],
+  "Cloud": ["AWS"],
+  "Version_Control": ["Git", "GitHub"],
+  "Containerization": ["Docker"],
+  "Tools": ["Kafka", "Dify"],
+  "Databases": ["Postgres", "Redis", "MongoDB", "Elasticsearch", "TimescaleDB"]
+}
