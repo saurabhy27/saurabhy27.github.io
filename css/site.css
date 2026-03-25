@@ -5,8 +5,8 @@
   --surface-2: #111c33;
   --text: #e8eaed;
   --muted: #9aa0a6;
-  --accent: #a78bfa;
-  --accent-dim: #7c3aed;
+  --accent: #93c5fd;
+  --accent-dim: #60a5fa;
   --border: #223055;
   --radius: 12px;
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
@@ -40,7 +40,7 @@ body {
   background-color: var(--bg);
   background-image: 
     radial-gradient(1100px circle at 10% 0%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 45%),
-    radial-gradient(900px circle at 85% 10%, color-mix(in srgb, #60a5fa 14%, transparent), transparent 48%),
+    radial-gradient(900px circle at 85% 10%, color-mix(in srgb, var(--accent-dim) 14%, transparent), transparent 48%),
     linear-gradient(to bottom, rgba(7, 8, 18, 0.8), rgba(7, 8, 18, 0.95)),
     url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2048&auto=format&fit=crop');
   background-size: auto, auto, cover, cover;
@@ -627,7 +627,74 @@ table.skills {
 }
 
 .quote-grid.recommendation-wall {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  --slides-per-view: 3;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (1.25rem * (var(--slides-per-view) - 1))) / var(--slides-per-view));
+  grid-template-columns: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.quote-grid.recommendation-wall::-webkit-scrollbar {
+  display: none;
+}
+
+.recommendation-slider {
+  display: grid;
+  gap: 1rem;
+}
+
+.recommendation-viewport {
+  position: relative;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  appearance: none;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  color: var(--text);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.slider-btn span {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.slider-btn-prev {
+  left: -1.35rem;
+}
+
+.slider-btn-next {
+  right: -1.35rem;
+}
+
+.slider-btn:hover {
+  background: color-mix(in srgb, var(--accent) 18%, var(--surface));
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
+}
+
+.slider-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
 
 .quote-card {
@@ -637,6 +704,10 @@ table.skills {
   border-radius: var(--radius);
   padding: 1.35rem;
   overflow: hidden;
+  height: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
 }
 
 .quote-card.featured {
@@ -664,6 +735,8 @@ table.skills {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 1.2rem;
 }
 
 .quote-avatar {
@@ -688,6 +761,15 @@ table.skills {
 .quote-person span {
   color: var(--muted);
   font-size: 0.86rem;
+}
+
+.quote-person a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.quote-person a:hover {
+  color: var(--accent);
 }
 
 .award-timeline {
@@ -727,18 +809,31 @@ table.skills {
 
 @media (max-width: 640px) {
   .quote-grid.recommendation-wall {
-    grid-template-columns: 1fr;
+    --slides-per-view: 1;
   }
 
   .award-item {
     grid-template-columns: 1fr;
     gap: 0.35rem;
   }
+
+  .slider-btn {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .slider-btn-prev {
+    left: 0.35rem;
+  }
+
+  .slider-btn-next {
+    right: 0.35rem;
+  }
 }
 
 @media (max-width: 980px) and (min-width: 641px) {
   .quote-grid.recommendation-wall {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --slides-per-view: 2;
   }
 }
 
@@ -809,13 +904,13 @@ table.skills {
 }
 
 .terminal-body .prompt {
-  color: #a78bfa;
+  color: var(--accent);
   font-weight: bold;
   margin-right: 0.5rem;
 }
 
 .terminal-body .command {
-  color: #60a5fa;
+  color: var(--accent-dim);
 }
 
 .terminal-body .response {
@@ -845,5 +940,5 @@ body, html {
 }
 
 a, button, .btn, .nav-toggle, [role="button"], input[type="submit"], .skills-cloud, .tag-row .tag, .brand {
-  cursor: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='%23a78bfa' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='2 2 9 22 13 13 22 9 2 2'%3E%3C/polygon%3E%3Cline x1='2' y1='2' x2='13' y2='13'%3E%3C/line%3E%3C/svg%3E") 2 2, pointer !important;
+  cursor: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='%2360a5fa' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='2 2 9 22 13 13 22 9 2 2'%3E%3C/polygon%3E%3Cline x1='2' y1='2' x2='13' y2='13'%3E%3C/line%3E%3C/svg%3E") 2 2, pointer !important;
 }
