@@ -365,6 +365,91 @@ main {
   color: var(--muted);
 }
 
+/* Impact cards — image with text on hover */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.impact-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 16 / 10;
+}
+
+.impact-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.impact-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(7, 8, 18, 0.92) 0%, rgba(7, 8, 18, 0.6) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.impact-card:hover img,
+.impact-card:focus-within img {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+.impact-card:hover .impact-overlay,
+.impact-card:focus-within .impact-overlay {
+  opacity: 1;
+}
+
+.impact-overlay h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+  color: var(--text);
+  transform: translateY(8px);
+  transition: transform 0.35s ease;
+}
+
+.impact-card:hover .impact-overlay h3,
+.impact-card:focus-within .impact-overlay h3 {
+  transform: translateY(0);
+}
+
+.impact-overlay p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+  transform: translateY(8px);
+  transition: transform 0.4s ease 0.04s;
+}
+
+.impact-card:hover .impact-overlay p,
+.impact-card:focus-within .impact-overlay p {
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .impact-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(7, 8, 18, 0.88) 0%, rgba(7, 8, 18, 0.45) 60%, transparent 100%);
+  }
+
+  .impact-overlay h3,
+  .impact-overlay p {
+    transform: translateY(0);
+  }
+}
+
 /* Sections */
 .section-title {
   font-family: var(--font-mono);
@@ -581,6 +666,17 @@ table.skills {
   font-size: 1.05rem;
 }
 
+.link-list h3 a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.link-list h3 a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 .link-list p {
   margin: 0;
   font-size: 0.92rem;
@@ -770,6 +866,7 @@ table.skills {
 
 .quote-person a:hover {
   color: var(--accent);
+  text-decoration: underline;
 }
 
 .award-timeline {
@@ -797,6 +894,14 @@ table.skills {
   font-size: 0.88rem;
 }
 
+.award-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+  border-radius: 4px;
+}
+
 .award-body h3 {
   margin: 0 0 0.3rem;
   font-size: 1.05rem;
@@ -805,6 +910,156 @@ table.skills {
 .award-body p {
   margin: 0;
   color: var(--muted);
+}
+
+/* Road timeline */
+.road-timeline {
+  position: relative;
+  padding-left: 36px;
+}
+
+.road-timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 7px;
+  bottom: 7px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dim) 40%, var(--border) 100%);
+  border-radius: 2px;
+}
+
+.road-stop {
+  position: relative;
+  padding-bottom: 2.25rem;
+}
+
+.road-stop:last-child {
+  padding-bottom: 0;
+}
+
+.road-marker {
+  position: absolute;
+  left: -36px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-dim);
+  background: var(--bg);
+  z-index: 1;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.road-stop.active .road-marker {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
+  animation: marker-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes marker-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent); }
+  50% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 8%, transparent); }
+}
+
+.road-date {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.road-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.road-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.road-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.company-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.company-icon.icon-dark {
+  filter: invert(1) brightness(0.85);
+}
+
+.road-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .road-timeline {
+    padding-left: 28px;
+  }
+
+  .road-marker {
+    left: -28px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .road-timeline::before {
+    left: 5px;
+  }
+
+  .road-card {
+    padding: 1rem;
+  }
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  padding: 0.22rem 0.5rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.skill-pill img {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.skill-pill img.icon-dark {
+  filter: invert(1) brightness(0.75);
 }
 
 @media (max-width: 640px) {

@@ -5,25 +5,30 @@
 (function () {
   'use strict';
 
+  const LOBEHUB_CDN = 'https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@latest/dark';
+
+  const NODE_ICON_1 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' fill='none' stroke='%23a78bfa' stroke-width='3'%3E%3Ccircle cx='24' cy='24' r='12'/%3E%3Ccircle cx='56' cy='56' r='12'/%3E%3Cline x1='33' y1='33' x2='47' y2='47'/%3E%3C/svg%3E";
+  const NODE_ICON_2 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' fill='none' stroke='%23f472b6' stroke-width='3'%3E%3Ccircle cx='20' cy='40' r='12'/%3E%3Ccircle cx='60' cy='40' r='16'/%3E%3Cline x1='32' y1='40' x2='44' y2='40'/%3E%3C/svg%3E";
+
   const SKILLS = [
     { name: 'Python', slug: 'python', color: '#3776AB' },
     { name: 'Go', slug: 'go', color: '#00ADD8' },
-    { name: 'Java', slug: 'openjdk', color: '#ED8B00' },
+    { name: 'Java', slug: 'openjdk', color: '#ED8B00', iconUrl: 'https://cdn-icons-png.flaticon.com/128/226/226777.png' },
     { name: 'FastAPI', slug: 'fastapi', color: '#05998B' },
     { name: 'Spring Boot', slug: 'springboot', color: '#6DB33F' },
-    { name: 'Hugging Face', slug: 'huggingface', color: '#FFD21E' },
+    { name: 'Hugging Face', slug: 'huggingface', color: '#FFD21E', iconUrl: LOBEHUB_CDN + '/huggingface-color.png' },
     { name: 'Kafka', slug: 'apachekafka', color: '#FFFFFF' },
-    { name: 'Dify', slug: 'dify', color: '#FFFFFF' },
+    { name: 'Dify', slug: 'dify', color: '#1C64F2', iconUrl: LOBEHUB_CDN + '/dify.png' },
     { name: 'PostgreSQL', slug: 'postgresql', color: '#4169E1' },
     { name: 'Redis', slug: 'redis', color: '#DC382D' },
     { name: 'MongoDB', slug: 'mongodb', color: '#47A248' },
     { name: 'Elasticsearch', slug: 'elasticsearch', color: '#005571' },
     { name: 'Docker', slug: 'docker', color: '#2496ED' },
-    { name: 'AWS', slug: 'amazonwebservices', color: '#FF9900' },
+    { name: 'AWS', slug: 'aws', color: '#FF9900', iconUrl: LOBEHUB_CDN + '/aws.png' },
     { name: 'Git', slug: 'git', color: '#F05032' },
-    { name: 'System Design', slug: 'webauthn', color: '#a78bfa' },
-    { name: 'Distributed Systems', slug: 'diagramdotnet', color: '#06b6d4' },
-    { name: 'Scalability', slug: 'googlesheets', color: '#f472b6' }
+    { name: 'System Design', slug: '', color: '#a78bfa', iconUrl: NODE_ICON_1 },
+    { name: 'GitHub', slug: 'github', color: '#FFFFFF' },
+    { name: 'Scalability', slug: '', color: '#f472b6', iconUrl: NODE_ICON_2 }
   ];
 
   function init() {
@@ -234,7 +239,7 @@
         renderLabel();
         texture.needsUpdate = true;
       };
-      img.src = `https://cdn.simpleicons.org/${skill.slug}/${skill.color.replace('#', '')}`;
+      img.src = skill.iconUrl || `https://cdn.simpleicons.org/${skill.slug}/${skill.color.replace('#', '')}`;
     };
 
     SKILLS.forEach((skill, i) => createSprite(skill, positions[i]));

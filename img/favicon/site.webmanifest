@@ -1,6 +1,8 @@
 {
   "name": "Saurabh Singh — Portfolio",
   "short_name": "Saurabh Singh",
+  "start_url": "https://saurabh.build/",
+  "id": "https://saurabh.build/",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
@@ -14,6 +16,6 @@
     }
   ],
   "theme_color": "#0c0f14",
-  "background_color": "#0c0f14",
+  "background_color": "#0f172a",
   "display": "standalone"
 }

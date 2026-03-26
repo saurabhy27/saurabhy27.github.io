@@ -3,20 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume | Saurabh Singh — Senior Software Engineer</title>
-  <meta name="description" content="Resume of Saurabh Singh: senior software engineer across backend systems, AI/LLM integrations, distributed architecture, and product engineering." />
+  <meta name="theme-color" content="#0c0f14" />
+  <title>Experience | Saurabh Singh — Senior Software Engineer</title>
+  <meta name="description" content="Resume of Saurabh Singh — senior software engineer working on backend systems, AI/LLM tooling, and distributed infrastructure. 5+ years at OutcomesAI, Salesken, and Biofourmis." />
   <link rel="canonical" href="https://saurabh.build/resume.html" />
   <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Saurabh Singh" />
   <meta property="og:url" content="https://saurabh.build/resume.html" />
-  <meta property="og:title" content="Resume | Saurabh Singh" />
-  <meta property="og:description" content="Summary, experience, strengths, and resume download." />
+  <meta property="og:title" content="Experience | Saurabh Singh — Senior Software Engineer" />
+  <meta property="og:description" content="5+ years building backend systems at OutcomesAI, Salesken, and Biofourmis — healthcare, CRM, streaming, and AI/LLM integrations." />
   <meta property="og:image" content="https://saurabh.build/img/slider/saurabh.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Experience | Saurabh Singh" />
+  <meta name="twitter:description" content="Senior software engineer resume — backend systems, distributed infrastructure, AI/LLM tooling." />
+  <meta name="twitter:image" content="https://saurabh.build/img/slider/saurabh.jpg" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
   <link rel="manifest" href="img/favicon/site.webmanifest" />
   <link rel="stylesheet" href="css/site.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://saurabh.build/" },
+      { "@type": "ListItem", "position": 2, "name": "Experience", "item": "https://saurabh.build/resume.html" }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -28,10 +45,10 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="open-source.html">Open source</a></li>
+          <li><a href="resume.html" aria-current="page">Experience</a></li>
+          <li><a href="open-source.html">Projects</a></li>
           <li><a href="writing.html">Writing</a></li>
           <li><a href="recommendations-awards.html">Awards</a></li>
-          <li><a href="resume.html" aria-current="page">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -40,8 +57,8 @@
 
   <main id="main" class="wrap">
     <header class="page-header">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Resume</nav>
-      <h1>Resume</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Experience</nav>
+      <h1>Experience</h1>
     </header>
 
     <p class="cta-row" style="margin-top: 0;">
@@ -49,39 +66,79 @@
     </p>
 
     <section class="section" aria-labelledby="summary-heading">
-      <p style="margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.8;">Over the last 5+ years, I’ve worked on systems that sit close to revenue, operations, and product delivery: healthcare workflows, CRM infrastructure, streaming pipelines, and applied AI. My work tends to center on the practical questions that matter after launch: can this scale, can teams run it safely, and will it still make sense six months from now?</p>
+      <p style="margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.8;">5+ years building backend systems — healthcare platforms, CRM pipelines, streaming infra, and more recently, AI/LLM integrations. I care most about what happens after something ships: whether it holds up under load, whether the next person can debug it at 2 AM, and whether it still makes sense when requirements shift.</p>
     </section>
 
     <section class="section" aria-labelledby="experience-heading">
       <h2 id="experience-heading" class="section-title">experience.md</h2>
-      <div class="card">
-        <div class="award-timeline">
-          <div class="award-item">
-            <div class="award-date">2024–present</div>
-            <div class="award-body">
-              <h3>OutcomesAI — Senior Software Engineer</h3>
-              <p>Building core backend and deployment systems for real-time transcription and clinical workflows, including Whisper, GPT-4o, Gemini, EMR integrations, fine-tuned medical ASR, and production observability with Grafana, Prometheus, and Loki.</p>
+      <div class="road-timeline">
+        <div class="road-stop active">
+          <div class="road-marker"></div>
+          <span class="road-date">Aug 2024 – present</span>
+          <div class="road-card">
+            <h3><img src="img/company/outcomesai.png" alt="" class="company-icon icon-dark" width="30" height="30">OutcomesAI — Senior Software Engineer</h3>
+            <p>Work on the backend that powers real-time medical transcription — Whisper and GPT-4o for speech-to-text, Gemini for clinical note generation, plus the EMR sync layer. Also set up the observability stack (Grafana, Prometheus, Loki) so we actually know when things break.</p>
+            <div class="skill-row">
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="" width="14" height="14">Go</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" width="14" height="14">Python</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="" width="14" height="14">Model Training</span>
+              <span class="skill-pill">AI</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" width="14" height="14">AWS</span>
             </div>
           </div>
-          <div class="award-item">
-            <div class="award-date">2023–2024</div>
-            <div class="award-body">
-              <h3>Salesken — SDE2</h3>
-              <p>Led CRM-oriented delivery across backend and product systems, introduced Kafka-backed patterns, worked on GPT-4 powered signal generation, and contributed to engineering hiring and technical interviews.</p>
+        </div>
+
+        <div class="road-stop">
+          <div class="road-marker"></div>
+          <span class="road-date">Nov 2023 – Aug 2024</span>
+          <div class="road-card">
+            <h3><img src="img/company/salesken.png" alt="" class="company-icon" width="30" height="30">Salesken — SDE2</h3>
+            <p>Owned the CRM integration backend — built Kafka pipelines for syncing sales data and shipped a GPT-4 based signal extraction feature. Also ran a good chunk of the engineering interviews.</p>
+            <div class="skill-row">
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" width="14" height="14">Java</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="" width="14" height="14">Spring Boot</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" width="14" height="14">PostgreSQL</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/liquibase/liquibase-original.svg" alt="" width="14" height="14">Liquibase</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="" class="icon-dark" width="14" height="14">Kafka</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original.svg" alt="" width="14" height="14">Hibernate</span>
+              <span class="skill-pill">JPA</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" width="14" height="14">Python</span>
             </div>
           </div>
-          <div class="award-item">
-            <div class="award-date">2022–2023</div>
-            <div class="award-body">
-              <h3>Biofourmis — Senior Software Engineer</h3>
-              <p>Integrated ML algorithms into healthtech products, helped drive a monolith-to-Go-microservices migration, improved Redis caching, and optimized Postgres and TimescaleDB data retention with S3 archival strategies.</p>
+        </div>
+
+        <div class="road-stop">
+          <div class="road-marker"></div>
+          <span class="road-date">Jun 2022 – Oct 2023</span>
+          <div class="road-card">
+            <h3><img src="img/company/biofourmis.png" alt="" class="company-icon" width="30" height="30">Biofourmis — Senior Software Engineer</h3>
+            <p>Wired ML models into the patient monitoring pipeline, moved pieces of the monolith into Go microservices, and reworked how we handled data retention across Postgres and TimescaleDB (with S3 for cold storage).</p>
+            <div class="skill-row">
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" width="14" height="14">PostgreSQL</span>
+              <span class="skill-pill">Celery</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="" width="14" height="14">Redis</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" width="14" height="14">Python</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="" width="14" height="14">Go</span>
+              <span class="skill-pill">Microservices</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="" class="icon-dark" width="14" height="14">Kafka</span>
             </div>
           </div>
-          <div class="award-item">
-            <div class="award-date">2020–2022</div>
-            <div class="award-body">
-              <h3>Salesken — Software Developer</h3>
-              <p>Built OAuth and external-platform integrations across RingCentral, Twilio, Plivo, and ZoomInfo, while also improving Redis and Elasticsearch performance for production workloads.</p>
+        </div>
+
+        <div class="road-stop">
+          <div class="road-marker"></div>
+          <span class="road-date">Aug 2020 – Jun 2022</span>
+          <div class="road-card">
+            <h3><img src="img/company/salesken.png" alt="" class="company-icon" width="30" height="30">Salesken — Software Developer</h3>
+            <p>Built the OAuth flows and platform integrations for RingCentral, Twilio, Plivo, and ZoomInfo. Spent a fair bit of time tuning Redis and Elasticsearch to keep things fast as usage grew.</p>
+            <div class="skill-row">
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" width="14" height="14">PostgreSQL</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg" alt="" width="14" height="14">Elasticsearch</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="" width="14" height="14">Redis</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="" width="14" height="14">Spring Boot</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" width="14" height="14">Python</span>
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" width="14" height="14">Java</span>
+              <span class="skill-pill">Jersey</span>
             </div>
           </div>
         </div>
@@ -93,9 +150,9 @@
     <div class="wrap footer-inner">
       <p>Built with ❤️ © <span id="y"></span> Saurabh Singh.</p>
       <div class="footer-links">
-        <a href="https://github.com/saurabhy27" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/saurabhy27" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://medium.com/@saurabhy27" rel="noopener noreferrer">Medium</a>
+        <a href="https://github.com/saurabhy27" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/saurabhy27" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://medium.com/@saurabhy27" target="_blank" rel="noopener noreferrer">Medium</a>
       </div>
     </div>
   </footer>

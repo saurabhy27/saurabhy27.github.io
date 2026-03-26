@@ -12,17 +12,21 @@
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Saurabh Singh" />
   <meta property="og:url" content="https://saurabh.build/" />
   <meta property="og:title" content="Saurabh Singh | Senior Software Engineer" />
   <meta property="og:description"
     content="Senior backend engineer: distributed systems, AI/LLM in production. Open source work, Medium writing, and production engineering." />
   <meta property="og:image" content="https://saurabh.build/img/slider/saurabh.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Saurabh Singh | Senior Software Engineer" />
   <meta name="twitter:description"
     content="Senior software engineer — backends, streaming, AI/LLM. Open source and writing." />
   <meta name="twitter:image" content="https://saurabh.build/img/slider/saurabh.jpg" />
 
+  <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
@@ -80,10 +84,10 @@
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="open-source.html">Open source</a></li>
+          <li><a href="resume.html">Experience</a></li>
+          <li><a href="open-source.html">Projects</a></li>
           <li><a href="writing.html">Writing</a></li>
           <li><a href="recommendations-awards.html">Awards</a></li>
-          <li><a href="resume.html">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -94,7 +98,7 @@
     <section class="hero wrap"
       style="display:grid;grid-template-columns:1fr;gap:2rem;align-items:start;padding-top:4rem;padding-bottom:3rem;">
       <div style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;">
-        <img src="img/slider/saurabh.jpg" alt="Avatar of Saurabh Singh" width="160" height="160"
+        <img src="img/slider/saurabh.jpg" alt="Avatar of Saurabh Singh" width="180" height="180"
           style="border-radius:50%;border:2px solid var(--accent);object-fit:cover;flex-shrink:0;box-shadow: 0 0 20px rgba(167, 139, 250, 0.2);"
           loading="eager" />
         <div style="flex:1;min-width:min(100%,240px);">
@@ -104,22 +108,31 @@
           <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.5rem; letter-spacing: -0.02em;">Saurabh Singh
           </h1>
           <p class="lede" style="font-size: 1.25rem; color: var(--text); font-weight: 500;">
-            I just don’t write code. I build solutions that scale.
+            I build systems that hold up under real load.
           </p>
           <p style="color: var(--muted); max-width: 48rem; margin-top: 0.5rem;">
-            Specializing in distributed systems, real-time architecture, and high-performance applications.
+            Distributed systems, streaming pipelines, and making things fast.
           </p>
 
-          <div
-            style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; color: var(--muted); font-size: 0.9rem;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <a href="https://maps.app.goo.gl/mQpUkKM4VzuptzHy5" target="_blank"
-              style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent);">Bangalore,
-              India (BLR)</a>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-top: 1rem; color: var(--muted); font-size: 0.9rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <span>IIT Bombay</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <a href="https://maps.app.goo.gl/mQpUkKM4VzuptzHy5" target="_blank"
+                style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent);">Bangalore,
+                India (BLR)</a>
+            </div>
           </div>
 
           <div class="cta-row" style="margin-top: 2rem;">
@@ -164,8 +177,7 @@
             </div>
 
             <p><span class="prompt">➜</span> <span class="command">./status.sh</span></p>
-            <p class="response"><span style="color: #4ade80;">[OK]</span> Ready to architect solutions beyond
-              boundaries.
+            <p class="response"><span style="color: #4ade80;">[OK]</span> Open to work — let’s talk.
             </p>
             <p class="cursor-blink">_</p>
           </div>
@@ -271,59 +283,32 @@
       </div>
     </section>
 
-    <!-- Recommendations Section -->
-    <section class="wrap section" aria-labelledby="recommendations-heading">
-      <div
-        style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem;">
-        <h2 id="recommendations-heading" class="section-title" style="margin:0;">recommendations.md</h2>
-        <a href="recommendations-awards.html" class="tab-link" style="font-size: 0.9rem;">view_all()</a>
+    <!-- Open Source Section -->
+    <section class="wrap section" aria-labelledby="oss-heading">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem;">
+        <h2 id="oss-heading" class="section-title" style="margin:0;">open_source.md</h2>
+        <a href="open-source.html" class="tab-link" style="font-size: 0.9rem;">view_all()</a>
       </div>
-      <div class="card-grid">
-        <article class="card" style="border-left: 4px solid var(--accent);">
-          <p style="font-style: italic; color: var(--text);">"Saurabh is a dependable and detail-oriented engineer who
-            takes ownership and see things through to completion - a pleasure to work with!"</p>
-          <div style="margin-top: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-            <div
-              style="width: 40px; height: 40px; border-radius: 50%; background: var(--surface-2); display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--accent);">
-              SV</div>
-            <div>
-              <strong style="display: block; font-size: 0.9rem;">Sreeraman Vaidyanathan</strong>
-              <span style="font-size: 0.8rem; color: var(--muted);">CEO and Co-Founder at Salesken</span>
-            </div>
-          </div>
-        </article>
-        <article class="card" style="border-left: 4px solid var(--accent);">
-          <p style="font-style: italic; color: var(--text);">"Saurabh is an exceptional coder and a natural leader. He
-            is well-versed in various programming languages and frameworks, with strong expertise in system design and
-            architectural implementation. His commitment to best coding practices ensures his work is efficient,
-            maintainable, and scalable. Beyond his technical skills, Saurabh’s humility and collaborative spirit make
-            him a pleasure to work with. I highly recommend Saurabh for any team seeking a skilled developer and
-            effective leader."</p>
-          <div style="margin-top: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-            <div
-              style="width: 40px; height: 40px; border-radius: 50%; background: var(--surface-2); display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--accent);">
-              AS</div>
-            <div>
-              <strong style="display: block; font-size: 0.9rem;">Ashutosh Singh</strong>
-              <span style="font-size: 0.8rem; color: var(--muted);">Software Developer</span>
-            </div>
-          </div>
-        </article>
-        <article class="card" style="border-left: 4px solid var(--accent);">
-          <p style="font-style: italic; color: var(--text);">"I had the pleasure of working with Saurabh as his manager
-            and can attest to their coding and technical skills. Saurabh is highly skilled in Python, Java, and Go and
-            has consistently developed high-quality, scalable software solutions for our team."</p>
-          <div style="margin-top: 1rem; display: flex; align-items: center; gap: 0.75rem;">
-            <div
-              style="width: 40px; height: 40px; border-radius: 50%; background: var(--surface-2); display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--accent);">
-              HS</div>
-            <div>
-              <strong style="display: block; font-size: 0.9rem;">Himanshu Soni</strong>
-              <span style="font-size: 0.8rem; color: var(--muted);">Technical Lead at Ametris</span>
-            </div>
-          </div>
-        </article>
-      </div>
+
+      <article class="card" style="border-left: 4px solid var(--accent); max-width: 48rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@latest/dark/dify.png"
+               alt="Dify logo" width="28" height="28" style="border-radius: 6px;" />
+          <span style="font-size: 0.85rem; color: var(--muted);">langgenius/dify</span>
+          <span style="margin-left: auto; font-size: 0.75rem; font-weight: 600; color: var(--accent); background: rgba(147,197,253,0.1); padding: 0.15rem 0.5rem; border-radius: 999px;">Merged</span>
+        </div>
+        <h3 style="font-size: 1.1rem; margin-bottom: 0.4rem;">
+          <a href="https://github.com/langgenius/dify/pull/25468" target="_blank" rel="noopener noreferrer"
+             style="color: var(--text); text-decoration: none; border-bottom: 1px solid transparent;"
+             onmouseover="this.style.borderBottomColor='var(--accent)'"
+             onmouseout="this.style.borderBottomColor='transparent'">
+            make SQLALCHEMY_POOL_TIMEOUT configurable
+          </a>
+        </h3>
+        <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.5; margin: 0;">
+          Exposed <code style="font-size: 0.85em; background: var(--surface-2); padding: 0.1rem 0.35rem; border-radius: 4px;">SQLALCHEMY_POOL_TIMEOUT</code> via env config so deployments can tune connection-pool wait behavior under load.
+        </p>
+      </article>
     </section>
 
   </main>
@@ -332,9 +317,9 @@
     <div class="wrap footer-inner">
       <p>Built with ❤️ © <span id="y"></span> Saurabh Singh.</p>
       <div class="footer-links">
-        <a href="https://github.com/saurabhy27" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/saurabhy27" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://medium.com/@saurabhy27" rel="noopener noreferrer">Medium</a>
+        <a href="https://github.com/saurabhy27" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/saurabhy27" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://medium.com/@saurabhy27" target="_blank" rel="noopener noreferrer">Medium</a>
       </div>
     </div>
   </footer>
