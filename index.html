@@ -95,13 +95,14 @@
   </header>
 
   <main id="main">
-    <section class="hero wrap"
-      style="display:grid;grid-template-columns:1fr;gap:2rem;align-items:start;padding-top:4rem;padding-bottom:3rem;">
-      <div style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;">
+    <section class="hero hero-home wrap"
+      style="display:grid;grid-template-columns:1fr;gap:2rem;align-items:start;">
+      <div class="hero-flex" style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;">
         <img src="img/slider/saurabh.jpg" alt="Avatar of Saurabh Singh" width="180" height="180"
+          class="hero-avatar"
           style="border-radius:50%;border:2px solid var(--accent);object-fit:cover;flex-shrink:0;box-shadow: 0 0 20px rgba(167, 139, 250, 0.2);"
           loading="eager" />
-        <div style="flex:1;min-width:min(100%,240px);">
+        <div class="hero-content" style="flex:1;min-width:min(100%,240px);">
           <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;">
             <p class="badge" style="margin: 0;">Senior Software Engineer</p>
           </div>
@@ -114,7 +115,7 @@
             Distributed systems, streaming pipelines, and making things fast.
           </p>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-top: 1rem; color: var(--muted); font-size: 0.9rem;">
+          <div class="hero-info-row" style="display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-top: 1rem; color: var(--muted); font-size: 0.9rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -185,7 +186,7 @@
 
         <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start; margin-top: 1rem;">
           <h2 class="section-title" style="margin-bottom: 0; position: relative; z-index: 20;">skills.json</h2>
-          <div id="skills-globe" style="width: 100%; height: 550px; position: relative;"></div>
+          <div id="skills-globe" class="skills-globe-wrap" style="width: 100%; height: 550px; position: relative;"></div>
         </div>
       </div>
     </section>
@@ -200,7 +201,7 @@
           <div id="github-total" style="font-size: 0.9rem; color: var(--muted);">Loading...</div>
         </div>
 
-        <div style="position: relative; width: 100%; padding-bottom: 0.5rem;">
+        <div class="github-graph-wrap" style="position: relative; width: 100%; padding-bottom: 0.5rem;">
           <div id="github-graph" style="width: 100%; position: relative;">
             <p style="color: var(--muted); text-align: center; padding: 2rem 0;">Loading contributions...</p>
           </div>
@@ -225,61 +226,71 @@
         <h2 id="writing-heading" class="section-title">featured_writing.md</h2>
         <a href="writing.html" class="tab-link" style="font-size: 0.9rem;">view_all()</a>
       </div>
-      <div class="card-grid">
-        <article class="card">
-          <a class="card-media"
-            href="https://saurabhy27.medium.com/how-to-run-sonarqube-locally-with-docker-a-complete-beginners-guide-7f71c69498fd"
-            target="_blank" rel="noopener noreferrer">
-            <img src="img/writing/sonarqube.webp?v=2" alt="SonarQube article cover image" loading="lazy" />
-          </a>
-          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">
-            <a href="https://saurabhy27.medium.com/how-to-run-sonarqube-locally-with-docker-a-complete-beginners-guide-7f71c69498fd"
-              target="_blank" rel="noopener noreferrer"
-              style="color: var(--text); text-decoration: none; border-bottom: 1px solid transparent;"
-              onmouseover="this.style.borderBottomColor='var(--accent)'"
-              onmouseout="this.style.borderBottomColor='transparent'">
-              SonarQube Locally with Docker
-            </a>
-          </h3>
-          <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.5;">Static analysis with Docker Compose:
-            local dashboard, project setup, and analysis workflow.</p>
-        </article>
-        <article class="card">
-          <a class="card-media"
-            href="https://saurabhy27.medium.com/introduction-to-dify-what-it-is-and-how-to-install-create-your-first-app-96a347a81ffa"
-            target="_blank" rel="noopener noreferrer">
-            <img src="img/writing/dify.webp" alt="Dify article cover image" loading="lazy" />
-          </a>
-          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">
-            <a href="https://saurabhy27.medium.com/introduction-to-dify-what-it-is-and-how-to-install-create-your-first-app-96a347a81ffa"
-              target="_blank" rel="noopener noreferrer"
-              style="color: var(--text); text-decoration: none; border-bottom: 1px solid transparent;"
-              onmouseover="this.style.borderBottomColor='var(--accent)'"
-              onmouseout="this.style.borderBottomColor='transparent'">
-              Introduction to Dify & AI Apps
-            </a>
-          </h3>
-          <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.5;">Self-host Dify, configure models, and
-            build your first LLM workflow from scratch.</p>
-        </article>
-        <article class="card">
-          <a class="card-media"
-            href="https://saurabhy27.medium.com/tf-idf-monogram-bi-gram-and-tri-gram-and-python-implementation-f343385b62a4"
-            target="_blank" rel="noopener noreferrer">
-            <img src="img/writing/tf-idf.webp" alt="TF-IDF article cover image" loading="lazy" />
-          </a>
-          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">
-            <a href="https://saurabhy27.medium.com/tf-idf-monogram-bi-gram-and-tri-gram-and-python-implementation-f343385b62a4"
-              target="_blank" rel="noopener noreferrer"
-              style="color: var(--text); text-decoration: none; border-bottom: 1px solid transparent;"
-              onmouseover="this.style.borderBottomColor='var(--accent)'"
-              onmouseout="this.style.borderBottomColor='transparent'">
-              TF-IDF & N-grams in Python
-            </a>
-          </h3>
-          <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.5;">NLP baseline: implementing monogram,
-            bi-gram, and tri-gram TF-IDF for text analysis.</p>
-        </article>
+      <div class="writing-slider" data-slider>
+        <div class="writing-viewport">
+          <button type="button" class="slider-btn slider-btn-prev" data-slider-prev aria-label="Show previous article">
+            <span aria-hidden="true">&#8249;</span>
+          </button>
+          <button type="button" class="slider-btn slider-btn-next" data-slider-next aria-label="Show next article">
+            <span aria-hidden="true">&#8250;</span>
+          </button>
+          <div class="writing-wall" data-slider-track>
+            <article class="card">
+              <a class="card-media"
+                href="https://saurabhy27.medium.com/how-to-run-sonarqube-locally-with-docker-a-complete-beginners-guide-7f71c69498fd"
+                target="_blank" rel="noopener noreferrer">
+                <img src="img/writing/sonarqube.webp?v=2" alt="SonarQube article cover image" loading="lazy" />
+              </a>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+                <a href="https://saurabhy27.medium.com/how-to-run-sonarqube-locally-with-docker-a-complete-beginners-guide-7f71c69498fd"
+                  target="_blank" rel="noopener noreferrer"
+                  style="color: var(--text); text-decoration: none; border-bottom: 1px solid transparent;"
+                  onmouseover="this.style.borderBottomColor='var(--accent)'"
+                  onmouseout="this.style.borderBottomColor='transparent'">
+                  SonarQube Locally with Docker
+                </a>
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.5;">Static analysis with Docker Compose:
+                local dashboard, project setup, and analysis workflow.</p>
+            </article>
+            <article class="card">
+              <a class="card-media"
+                href="https://saurabhy27.medium.com/introduction-to-dify-what-it-is-and-how-to-install-create-your-first-app-96a347a81ffa"
+                target="_blank" rel="noopener noreferrer">
+                <img src="img/writing/dify.webp" alt="Dify article cover image" loading="lazy" />
+              </a>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+                <a href="https://saurabhy27.medium.com/introduction-to-dify-what-it-is-and-how-to-install-create-your-first-app-96a347a81ffa"
+                  target="_blank" rel="noopener noreferrer"
+                  style="color: var(--text); text-decoration: none; border-bottom: 1px solid transparent;"
+                  onmouseover="this.style.borderBottomColor='var(--accent)'"
+                  onmouseout="this.style.borderBottomColor='transparent'">
+                  Introduction to Dify & AI Apps
+                </a>
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.5;">Self-host Dify, configure models, and
+                build your first LLM workflow from scratch.</p>
+            </article>
+            <article class="card">
+              <a class="card-media"
+                href="https://saurabhy27.medium.com/tf-idf-monogram-bi-gram-and-tri-gram-and-python-implementation-f343385b62a4"
+                target="_blank" rel="noopener noreferrer">
+                <img src="img/writing/tf-idf.webp" alt="TF-IDF article cover image" loading="lazy" />
+              </a>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+                <a href="https://saurabhy27.medium.com/tf-idf-monogram-bi-gram-and-tri-gram-and-python-implementation-f343385b62a4"
+                  target="_blank" rel="noopener noreferrer"
+                  style="color: var(--text); text-decoration: none; border-bottom: 1px solid transparent;"
+                  onmouseover="this.style.borderBottomColor='var(--accent)'"
+                  onmouseout="this.style.borderBottomColor='transparent'">
+                  TF-IDF & N-grams in Python
+                </a>
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.5;">NLP baseline: implementing monogram,
+                bi-gram, and tri-gram TF-IDF for text analysis.</p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
